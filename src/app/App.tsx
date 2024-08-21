@@ -7,7 +7,11 @@ import {AppRouter} from "app/providers/router";
 import {Navbar} from "widgets/Navbar";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import {Sidebar} from "widgets/Sidebar";
+import {useTranslation} from "react-i18next";
 
+const Component = () => {
+
+}
 
 const App = () => {
 
@@ -15,12 +19,13 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Navbar/>
-            <div className='content-page'>
-                <Sidebar />
-                <AppRouter/>
-            </div>
-
+            <Suspense fallback="">
+                <Navbar/>
+                <div className='content-page'>
+                    <Sidebar />
+                    <AppRouter/>
+                </div>
+            </Suspense>
         </div>
     );
 };
