@@ -4,7 +4,7 @@ module.exports = {
         'airbnb',
         'airbnb/hooks',
         'plugin:@typescript-eslint/recommended',
-        // 'plugin:i18next/recommended',
+        'plugin:i18next/recommended',
     ],
     parserOptions: {
         ecmaVersion: 2021,
@@ -18,6 +18,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
+        'i18next',
     ],
     rules: {
         indent: [2, 4],
@@ -38,6 +39,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/no-unused-vars': 'off',
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
     },
     globals: {
         __IS_DEV__: true,
