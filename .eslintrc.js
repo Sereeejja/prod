@@ -14,6 +14,7 @@ module.exports = {
         browser: true,
         node: true,
         es2021: true,
+        jest: true,
     },
     plugins: [
         'react',
@@ -40,6 +41,7 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/no-unused-vars': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': 'warn',
     },
     globals: {
         __IS_DEV__: true,
