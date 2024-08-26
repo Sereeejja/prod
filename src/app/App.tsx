@@ -1,4 +1,6 @@
-import React, { Suspense, useContext, useState } from 'react';
+import React, {
+    Suspense, useContext, useEffect, useState,
+} from 'react';
 import './styles/index.scss';
 import { Link, Route, Routes } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
