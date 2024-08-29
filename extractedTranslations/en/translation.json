@@ -1,12 +1,14 @@
 {
+  "About": "About",
   "About web": "About web",
   "Language": "Language",
+  "Main": "Main",
   "Main page": "Main page",
   "Page not found": "Page not found",
   "Refresh page": "Refresh page",
+  "Short Language": "Short Language",
   "Some error": "Some error",
-  "text": "text",
-  "Main Page": "Main Page",
-  "About": "About",
-  "Toggle": "Toggle"
+  "Toggle": "Toggle",
+  "en": "en",
+  "text": "text"
 }

@@ -1,13 +1,13 @@
 {
   "Test translate": "Тестовый перевод",
   "Translate": "Перевод",
-  "Main page": "Главная страница",
+  "About": "О сайте",
   "Language": "Русский",
   "Page not found": "Страница не найдена",
   "Some error": "Произошла непредвиденная ошибка",
-  "Refresh page": "Refresh page",
+  "Refresh page": "Перезагрузить страницу",
   "text": "text",
-  "Main Page": "Main Page",
-  "About": "About",
-  "Toggle": "Toggle"
+  "Toggle": "Переключить",
+  "Short Language": "Рус",
+  "Main": "Главная страница"
 }
