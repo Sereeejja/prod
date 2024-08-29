@@ -1,11 +1,6 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    extends: [
-        'airbnb',
-        'airbnb/hooks',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:i18next/recommended',
-    ],
+    extends: ['airbnb', 'airbnb/hooks', 'plugin:@typescript-eslint/recommended', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     parserOptions: {
         ecmaVersion: 2021,
         sourceType: 'module',
@@ -42,7 +37,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, ignoreAttribute: ['data-testid'] },
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
         ],
         'max-len': ['warn', { code: 100, tabWidth: 4, ignoreComments: true }],
     },
