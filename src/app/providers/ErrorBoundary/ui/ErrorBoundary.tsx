@@ -1,8 +1,7 @@
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
 import { types } from 'sass';
-import Error = types.Error;
-import { withTranslation } from 'react-i18next';
 import PageError from 'widgets/PageError/ui/PageError';
+import Error = types.Error;
 
 interface ErrorBoundaryProps {
     children: ReactNode;
