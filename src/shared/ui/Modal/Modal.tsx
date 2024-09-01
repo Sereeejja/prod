@@ -10,7 +10,7 @@ interface ModalProps {
     className?: string;
     children?: ReactNode;
     isOpen: boolean;
-    onClose: () => void;
+    onClose?: () => void;
 }
 
 const ANIMATION_DELAY = 300;
