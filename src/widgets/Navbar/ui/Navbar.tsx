@@ -27,7 +27,7 @@ const Navbar:React.FC<NavbarProps> = ({ className }) => {
                 {t('Log In')}
             </Button>
             <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, totam.
+                {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, totam.')}
             </Modal>
         </div>
     );
