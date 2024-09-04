@@ -1,10 +1,12 @@
 import React from 'react';
 import Button from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { counterActions } from '../modal/slice/CounterSlice';
 import { getCounterValue } from '../modal/selectors/getCounterValue/getCounterValue';
 
 const Counter:React.FC = () => {
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     const counterValue = useSelector(getCounterValue);
 
@@ -19,8 +21,8 @@ const Counter:React.FC = () => {
             <h1 data-testid="value-title">
                 {counterValue}
             </h1>
-            <Button data-testid="increment-btn" onClick={increment}>Increment</Button>
-            <Button data-testid="decrement-btn" onClick={decrement}>Decrement</Button>
+            <Button data-testid="increment-btn" onClick={increment}>{t('Increment')}</Button>
+            <Button data-testid="decrement-btn" onClick={decrement}>{t('Decrement')}</Button>
         </div>
     );
 };

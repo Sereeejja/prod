@@ -16,5 +16,7 @@
   "Some error": "Some error",
   "Toggle": "Toggle",
   "en": "en",
-  "text": "text"
+  "text": "text",
+  "Increment": "Increment",
+  "Decrement": "Decrement"
 }

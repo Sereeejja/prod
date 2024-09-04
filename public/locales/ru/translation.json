@@ -10,5 +10,7 @@
   "Toggle": "Переключить",
   "Short Language": "Рус",
   "Main": "Главная страница",
-  "Log In": "Войти"
+  "Log In": "Войти",
+  "Increment": "Increment",
+  "Decrement": "Decrement"
 }
