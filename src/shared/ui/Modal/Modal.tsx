@@ -40,7 +40,6 @@ const Modal:React.FC<ModalProps> = (props: ModalProps) => {
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
-        [cls[theme]]: true,
     };
 
     const onKeyDown = useCallback((e: KeyboardEvent) => {
@@ -64,7 +63,7 @@ const Modal:React.FC<ModalProps> = (props: ModalProps) => {
     const onContentClick = (e: React.MouseEvent) => {
         e.stopPropagation();
     };
-    console.log([cls[theme]]);
+
     return (
         <Portal>
             <div className={classNames(cls.Modal, mods, [className])}>

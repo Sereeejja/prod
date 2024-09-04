@@ -1,6 +1,8 @@
 {
   "About": "About",
   "About web": "About web",
+  "Decrement": "Decrement",
+  "Increment": "Increment",
   "Language": "Language",
   "Log In": "Log In",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
@@ -17,7 +19,5 @@
   "Some error": "Some error",
   "Toggle": "Toggle",
   "en": "en",
-  "text": "text",
-  "Increment": "Increment",
-  "Decrement": "Decrement"
+  "text": "text"
 }
