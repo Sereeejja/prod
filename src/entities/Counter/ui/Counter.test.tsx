@@ -6,7 +6,7 @@ import Counter from './Counter';
 
 describe('Counter', () => {
     test('Render counter', () => {
-        const state: StateSchema = {
+        const state: Partial<StateSchema> = {
             counter: {
                 value: 10,
             },
@@ -17,7 +17,7 @@ describe('Counter', () => {
     });
 
     test('Increment', () => {
-        const state: StateSchema = {
+        const state: Partial<StateSchema> = {
             counter: {
                 value: 10,
             },
@@ -29,7 +29,7 @@ describe('Counter', () => {
     });
 
     test('Increment', () => {
-        const state: StateSchema = {
+        const state: Partial<StateSchema> = {
             counter: {
                 value: 10,
             },

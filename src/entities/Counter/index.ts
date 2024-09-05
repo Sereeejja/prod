@@ -1,6 +1,6 @@
-import { counterReducer } from './modal/slice/CounterSlice';
+import { counterReducer } from './model/slice/CounterSlice';
 import Counter from './ui/Counter';
-import { CounterSchema } from './modal/types/counterSchema';
+import { CounterSchema } from './model/types/counterSchema';
 
 export {
     counterReducer,

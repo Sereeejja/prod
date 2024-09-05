@@ -2,8 +2,8 @@ import React from 'react';
 import Button from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { counterActions } from '../modal/slice/CounterSlice';
-import { getCounterValue } from '../modal/selectors/getCounterValue/getCounterValue';
+import { getCounterValue } from 'entities/Counter/model/selectors/getCounterValue/getCounterValue';
+import { counterActions } from '../model/slice/CounterSlice';
 
 const Counter:React.FC = () => {
     const { t } = useTranslation();
