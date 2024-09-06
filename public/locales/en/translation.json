@@ -14,5 +14,8 @@
   "Increment": "Increment",
   "Decrement": "Decrement",
   "Username": "Username",
-  "Password": "Password"
+  "Password": "Password",
+  "Authorization": "Authorization",
+  "Incorrect login or password": "Incorrect login or password",
+  "Log Out": "Log Out"
 }

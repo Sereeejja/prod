@@ -1,10 +1,12 @@
 {
   "About": "About",
   "About web": "About web",
+  "Authorization": "Authorization",
   "Decrement": "Decrement",
   "Increment": "Increment",
   "Language": "Language",
   "Log In": "Log In",
+  "Log Out": "Log Out",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Culpa, totam": {
       "": ""
