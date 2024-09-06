@@ -16,6 +16,7 @@ function MainPage() {
         <div>
             {/* <BugButton /> */}
             <h1>{t('Main page')}</h1>
+            <Counter />
         </div>
     );
 }
