@@ -47,6 +47,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'react/jsx-no-useless-fragment': 'warn',
+        '@typescript-eslint/no-explicit-any': 'warn',
     },
     globals: {
         __IS_DEV__: true,

@@ -2,7 +2,7 @@ import React, { ReactNode, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useStore } from 'react-redux';
 import { ReduxStoreWithManager, StateSchema } from 'app/providers/StoreProvider';
-import { useAppDispatch } from 'app/providers/StoreProvider/config/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema';
 import { Reducer } from '@reduxjs/toolkit';
 
@@ -27,7 +27,6 @@ const DynamicModuleLoader:React.FC<DynamicModuleLoaderProps> = (props: DynamicMo
         reducers,
         removeAfterUnmount,
     } = props;
-
     useEffect(() => {
         Object.entries(reducers).forEach(([name, reducer]: ReducersListEntry) => {
             store.reducerManager.add(name, reducer);

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import Modal from 'shared/ui/Modal/Modal';
@@ -6,14 +6,14 @@ import Button, { ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { getUserAuthData, userActions } from 'entities/User';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'app/providers/StoreProvider/config/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string;
 }
 
-const Navbar:React.FC<NavbarProps> = ({ className }) => {
+const Navbar:React.FC<NavbarProps> = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
@@ -29,7 +29,7 @@ const Navbar:React.FC<NavbarProps> = ({ className }) => {
 
     const onLogout = useCallback(() => {
         dispatch(userActions.logout());
-        setIsAuthModal(false);
+        // setIsAuthModal(false);
     }, [dispatch]);
 
     if (authData) {
@@ -59,6 +59,6 @@ const Navbar:React.FC<NavbarProps> = ({ className }) => {
 
         </div>
     );
-};
+});
 
 export default Navbar;
