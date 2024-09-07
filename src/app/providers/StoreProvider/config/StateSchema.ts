@@ -2,7 +2,7 @@ import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import {
-    Action, AnyAction, combineReducers, EnhancedStore, Reducer, ReducersMapObject,
+    Action, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { CombinedState } from '@reduxjs/toolkit/query';
 
