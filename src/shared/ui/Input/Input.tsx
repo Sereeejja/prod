@@ -26,7 +26,7 @@ const Input:React.FC<InputProps> = memo((props : InputProps) => {
         ...othersProps
     } = props;
 
-    const inputRef = useRef<HTMLInputElement>();
+    const inputRef = useRef<HTMLInputElement>(null);
     const [isFocused, setIsFocused] = useState(false);
     const [caretPosition, setCaretPositions] = useState(0);
 

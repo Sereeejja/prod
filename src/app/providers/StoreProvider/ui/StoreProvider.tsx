@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 interface StoreProviderProps {
     children?: ReactNode;
-    initialState?: Partial<StateSchema>;
+    initialState?: DeepPartial<StateSchema>;
     asyncReducers?: Partial<ReducersMapObject<StateSchema>>;
 }
 

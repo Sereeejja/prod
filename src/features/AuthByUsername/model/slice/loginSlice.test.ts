@@ -13,6 +13,9 @@ describe('loginSlice.test', () => {
     });
     test('test set isLoading', () => {
         const state: Partial<LoginSchema> = { isLoading: true };
-        expect(loginReducer(state as LoginSchema, loginByUsername.fulfilled({ username: 'some', id: '1' }, undefined, undefined))).toEqual({ isLoading: false });
+        expect(loginReducer(
+            state as LoginSchema,
+            loginByUsername.fulfilled({ username: 'some', id: '1' }, '', { password: '123', username: '123' }),
+        )).toEqual({ isLoading: false });
     });
 });

@@ -26,7 +26,7 @@ export const Primary: Story = {
         ThemeDecorator(Theme.LIGHT),
         StoreDecorator({
             loginForm:
-                { username: 'username', password: '123', isLoading: false },
+                { username: 'username', isLoading: false },
         }),
     ],
     args: {},
