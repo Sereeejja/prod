@@ -3,6 +3,7 @@
   "About web": "About web",
   "Authorization": "Authorization",
   "Decrement": "Decrement",
+  "Edit": "Edit",
   "Incorrect login or password": "Incorrect login or password",
   "Increment": "Increment",
   "Language": "Language",
@@ -17,12 +18,15 @@
   "Main page": "Main page",
   "Page not found": "Page not found",
   "Password": "Password",
+  "Profile": "Profile",
   "Profile page": "Profile page",
   "Refresh page": "Refresh page",
   "Short Language": "Short Language",
   "Some error": "Some error",
   "Toggle": "Toggle",
   "Username": "Username",
+  "Your name": "Your name",
+  "Your second name": "Your second name",
   "en": "en",
   "text": "text"
 }

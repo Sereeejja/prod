@@ -8,9 +8,9 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
 
     getState: () => StateSchema;
 
-    actionCreator: ActionCreatorType<Return, Arg, ThunkConfig<string>>;
+    actionCreator: ActionCreatorType<Return, Arg, RejectedValue>;
 
-    constructor(actionCreator: ActionCreatorType<Return, Arg, ThunkConfig<string>>) {
+    constructor(actionCreator: ActionCreatorType<Return, Arg, RejectedValue>) {
         this.actionCreator = actionCreator;
         this.dispatch = jest.fn();
         this.getState = jest.fn();
