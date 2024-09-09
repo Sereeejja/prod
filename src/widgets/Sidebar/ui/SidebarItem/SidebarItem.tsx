@@ -5,6 +5,8 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import AboutIcon from 'shared/assets/icons/clarity_list-outline-badged.svg';
 import { SidebarItemType } from 'widgets/Sidebar/model/items';
+import { useSelector } from 'react-redux';
+import { getUserAuthData } from 'entities/User';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
@@ -14,11 +16,14 @@ interface SidebarItemProps {
 
 const SidebarItem:React.FC<SidebarItemProps> = (props: SidebarItemProps) => {
     const { t } = useTranslation();
+    const isAuth = useSelector(getUserAuthData);
     const {
         item,
         collapsed,
     } = props;
-
+    if (item.authOnly && !isAuth) {
+        return null;
+    }
     return (
         <AppLink
             to={item.path}

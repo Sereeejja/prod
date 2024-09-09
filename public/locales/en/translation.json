@@ -18,5 +18,7 @@
   "Authorization": "Authorization",
   "Incorrect login or password": "Incorrect login or password",
   "Log Out": "Log Out",
-  "Profile page": "Profile page"
+  "Profile page": "Profile page",
+  "Specify currency": "Specify currency",
+  "Specify country": "Specify country"
 }
