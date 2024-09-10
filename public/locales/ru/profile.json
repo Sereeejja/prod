@@ -10,5 +10,10 @@
   "Your age": "Your age",
   "Your city": "Your city",
   "Your avatar url": "Your avatar url",
-  "Your username": "Your username"
+  "Your username": "Your username",
+  "Server error": "Server error",
+  "No data": "No data",
+  "Incorrect country": "Incorrect country",
+  "Incorrect age": "Incorrect age",
+  "Incorrect name or surename": "Incorrect name or surename"
 }
