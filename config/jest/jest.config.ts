@@ -10,6 +10,7 @@ export default {
     globals: {
         __IS_DEV__: true,
         __API__: true,
+        __PROJECT__: 'jest',
     },
 
     testEnvironment: 'jsdom',
@@ -38,7 +39,7 @@ export default {
     moduleNameMapper: {
         // '\\.(css|scss)$': '<rootDir>config/jest/__mocks__/styleMock.ts',
         '\\.(css|scss)$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, '__mocks__', 'jestEmptyComponent.tsx'),
+        '\\.(svg|jpg)$': path.resolve(__dirname, '__mocks__', 'jestEmptyComponent.tsx'),
     },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
