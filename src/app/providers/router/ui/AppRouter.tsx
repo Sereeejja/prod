@@ -26,7 +26,6 @@ const AppRouter = React.memo(() => {
             <Routes>
                 {Object.values(routeConfig).map((route) => (
                     renderWithWrapper(route)
-
                 ))}
             </Routes>
         </Suspense>
