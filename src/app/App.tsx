@@ -7,8 +7,9 @@ import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { userActions } from 'entities/User';
+import { getUserMounted, userActions } from 'entities/User';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Component = () => {
 
@@ -17,6 +18,7 @@ const Component = () => {
 const App = () => {
     const { theme } = useTheme();
     const dispatch = useAppDispatch();
+    const userMounted = useSelector(getUserMounted);
 
     useEffect(() => {
         dispatch(userActions.initAuthData());
@@ -28,7 +30,7 @@ const App = () => {
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
-                    <AppRouter />
+                    {userMounted && <AppRouter />}
                 </div>
             </Suspense>
         </div>
