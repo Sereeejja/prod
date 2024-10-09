@@ -27,7 +27,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = memo((props: Artic
 
     return (
         <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-            ARTICLE DETAILS PAGE
             <ArticleDetails id={id} />
         </div>
 

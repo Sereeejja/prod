@@ -1,26 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import { Article } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArticleDetailsPage from './ArticleDetailsPage';
-
-const meta = {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
-    parameters: {
-        layout: 'fullscreen',
-    },
-    tags: ['autodocs'],
-    argTypes: {
-        // backgroundColor: { control: 'color' },
-    },
-    args: {},
-
-} satisfies Meta<typeof ArticleDetailsPage>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
+import { StateSchema } from 'app/providers/StoreProvider';
+import {
+    getArticleDetailsData,
+    getArticleDetailsError,
+    getArticleDetailsIsLoading,
+} from 'entities/Article/model/selectors/articleDetails';
 
 const article: Article = {
     id: '1',
@@ -92,13 +77,39 @@ const article: Article = {
     ],
 };
 
-export const Normal: Story = {
-    args: { },
-    decorators: [StoreDecorator({
-        articleDetails: {
-            data: article,
-            isLoading: false,
-            error: undefined,
-        },
-    })],
-};
+describe('articleDetails.test', () => {
+    test('should return data', () => {
+        const data = article;
+        const state: DeepPartial<StateSchema> = {
+            articleDetails: {
+                data,
+            },
+        };
+        expect(getArticleDetailsData(state as StateSchema)).toEqual(data);
+    });
+
+    test('work with empty state', () => {
+        const state: DeepPartial<StateSchema> = {
+            articleDetails: {},
+        };
+        expect(getArticleDetailsData(state as StateSchema)).toEqual(undefined);
+    });
+
+    test('return error', () => {
+        const state: DeepPartial<StateSchema> = {
+            articleDetails: {
+                error: 'error',
+            },
+        };
+        expect(getArticleDetailsError(state as StateSchema)).toEqual('error');
+    });
+
+    test('return isLoading', () => {
+        const state: DeepPartial<StateSchema> = {
+            articleDetails: {
+                isLoading: false,
+            },
+        };
+        expect(getArticleDetailsIsLoading(state as StateSchema)).toEqual(false);
+    });
+});

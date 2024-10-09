@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Text, { TextTheme } from 'shared/ui/Text/Text';
+import Text, { TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
@@ -67,5 +67,21 @@ export const Error: Story = {
         title: 'Error',
         text: 'text lorem',
         theme: TextTheme.ERROR,
+    },
+};
+
+export const PrimarySizeM: Story = {
+    args: {
+        title: 'title lorem',
+        text: 'text lorem',
+        size: TextSize.M,
+    },
+};
+
+export const PrimarySizeL: Story = {
+    args: {
+        title: 'title lorem',
+        text: 'text lorem',
+        size: TextSize.L,
     },
 };
