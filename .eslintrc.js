@@ -48,6 +48,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'react/jsx-no-useless-fragment': 'warn',
         '@typescript-eslint/no-explicit-any': 'warn',
+        'quote-props': 'off',
     },
     globals: {
         __IS_DEV__: true,

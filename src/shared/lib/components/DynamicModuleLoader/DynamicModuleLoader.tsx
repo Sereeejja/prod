@@ -10,7 +10,7 @@ export type ReducersList = {
     [name in StateSchemaKey]?: Reducer
 }
 
-type ReducersListEntry = [StateSchemaKey, Reducer];
+type ReducersListEntry = [StateSchemaKey: string, Reducer];
 
 interface DynamicModuleLoaderProps {
     reducers: ReducersList;
