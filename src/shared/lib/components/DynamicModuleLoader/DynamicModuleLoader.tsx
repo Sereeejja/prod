@@ -10,7 +10,7 @@ export type ReducersList = {
     [name in StateSchemaKey]?: Reducer
 }
 
-type ReducersListEntry = [StateSchemaKey: string, Reducer];
+type ReducersListEntry = [StateSchemaKey, Reducer];
 
 interface DynamicModuleLoaderProps {
     reducers: ReducersList;
@@ -25,7 +25,7 @@ const DynamicModuleLoader:React.FC<DynamicModuleLoaderProps> = (props: DynamicMo
     const {
         children,
         reducers,
-        removeAfterUnmount,
+        removeAfterUnmount = true,
     } = props;
     useEffect(() => {
         Object.entries(reducers).forEach(([name, reducer]) => {

@@ -22,5 +22,7 @@
   "Specify currency": "Specify currency",
   "Specify country": "Specify country",
   "Error while loading an article": "Error while loading an article",
-  "Comments does not exists": "Comments does not exists"
+  "Comments does not exists": "Comments does not exists",
+  "Put comment text": "Put comment text",
+  "Send comment": "Send comment"
 }

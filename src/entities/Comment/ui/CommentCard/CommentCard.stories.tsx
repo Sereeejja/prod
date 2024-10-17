@@ -19,6 +19,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// export const Normal: Story = {
-//     args: {},
-// };
+export const Normal: Story = {
+    args: {
+        comment: {
+            id: '2',
+            text: 'some text',
+            user: { username: 'username', id: '1' },
+        },
+    },
+};
+
+export const Loading: Story = {
+    args: {
+        comment: {
+            id: '2',
+            text: 'some text',
+            user: { username: 'username', id: '1' },
+        },
+        isLoading: true,
+    },
+};
