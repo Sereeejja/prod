@@ -1,12 +1,8 @@
-import React, { memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { Article, ArticleList, ArticleView } from 'entities/Article';
-import cls from './ArticlesPage.module.scss';
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { Article, ArticleView } from 'entities/Article';
+import ArticleListItem from './ArticleListItem';
 
-interface ArticlesPageProps {
-    className?: string;
-}
 const article = {
     'id': '1',
     'title': 'Javascript news',
@@ -84,22 +80,33 @@ const article = {
     ],
 } as Article;
 
-const ArticlesPage: React.FC<ArticlesPageProps> = memo((props: ArticlesPageProps) => {
-    const { t } = useTranslation('articles');
-    const {
-        className,
-    } = props;
+const meta = {
+    title: 'shared/ArticleListItem',
+    component: ArticleListItem,
+    parameters: {
+        layout: 'fullscreen',
+    },
+    tags: ['autodocs'],
+    argTypes: {
+        // backgroundColor: { control: 'color' },
+    },
+    args: {},
 
-    return (
-        <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            <ArticleList
-                view={ArticleView.BIG}
-                articles={new Array(16)
-                    .fill(0)
-                    .map((item, index) => ({ ...article, id: String(index) }))}
-            />
-        </div>
-    );
-});
+} satisfies Meta<typeof ArticleListItem>;
 
-export default ArticlesPage;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const NormalBig: Story = {
+    args: {
+        view: ArticleView.BIG,
+        article,
+    },
+};
+
+export const NormalSmall: Story = {
+    args: {
+        view: ArticleView.SMALL,
+        article,
+    },
+};

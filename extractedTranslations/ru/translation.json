@@ -4,6 +4,7 @@
   "About web": "About web",
   "Article does not found": "Article does not found",
   "Authorization": "Authorization",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Comments does not exists": "Comments does not exists",
   "Decrement": "Decrement",
@@ -32,6 +33,13 @@
   "Profile": "Profile",
   "Profile page": "Profile page",
   "Put comment text": "Put comment text",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Refresh page": "Refresh page",
   "Save": "Save",
   "Send comment": "Send comment",

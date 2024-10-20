@@ -49,6 +49,7 @@ module.exports = {
         'react/jsx-no-useless-fragment': 'warn',
         '@typescript-eslint/no-explicit-any': 'warn',
         'quote-props': 'off',
+        'react/no-array-index-key': 'warn',
     },
     globals: {
         __IS_DEV__: true,
