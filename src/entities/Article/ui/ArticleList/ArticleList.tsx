@@ -28,14 +28,6 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
             <ArticleListItemSkeleton view={view} key={index} className={cls.card} />
         ));
 
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {getSkeletons(view)}
-            </div>
-        );
-    }
-
     const renderArticle = (article: Article) => (
         <ArticleListItem
             key={article.id}
@@ -50,6 +42,7 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
             {articles.length > 0
                 ? articles.map((article) => (renderArticle(article)))
                 : null}
+            {isLoading && getSkeletons(view)}
 
         </div>
     );

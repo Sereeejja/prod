@@ -1,8 +1,3 @@
-import axios from 'axios';
-import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername';
-import { Dispatch } from '@reduxjs/toolkit';
-import { StateSchema } from 'app/providers/StoreProvider';
-import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsynkThunk/TestAsyncThunk';
 import { Country } from 'entities/Country';
 import avatar from 'shared/assets/tests/storybook.jpg';

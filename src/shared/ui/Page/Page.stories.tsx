@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import Page from 'shared/ui/Page/Page';
 
 const meta = {
     title: 'shared/Page',
@@ -19,5 +20,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {},
+    args: { children: '123' },
 };

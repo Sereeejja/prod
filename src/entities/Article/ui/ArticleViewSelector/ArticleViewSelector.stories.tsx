@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
+import { ArticleViewSelector } from './ArticleViewSelector';
 
 const meta = {
     title: 'shared/ArticleViewSelector',
@@ -19,5 +20,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {},
+    args: { onViewClick: () => {} },
 };
