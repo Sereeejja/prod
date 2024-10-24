@@ -11,7 +11,7 @@ import { SidebarItemType } from 'widgets/Sidebar/model/types/sidebar';
 export const getSidebarItems = createSelector(
     getUserAuthData,
     (userData) => {
-        const sidebarItemsList: SidebarItemType[] = [
+        const baseSidebarItems: SidebarItemType[] = [
             {
                 path: RoutePath.main,
                 Icon: MainIcon,
@@ -23,8 +23,10 @@ export const getSidebarItems = createSelector(
                 text: 'About',
             },
         ];
+
         if (userData) {
-            sidebarItemsList.push(
+            return [
+                ...baseSidebarItems,
                 {
                     path: RoutePath.profile + userData.id,
                     Icon: ProfileIcon,
@@ -37,9 +39,9 @@ export const getSidebarItems = createSelector(
                     text: 'Articles',
                     authOnly: true,
                 },
-            );
+            ];
         }
 
-        return sidebarItemsList;
+        return baseSidebarItems;
     },
 );

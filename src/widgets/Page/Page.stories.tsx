@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import Page from 'shared/ui/Page/Page';
+import Page from 'widgets/Page/Page';
 
 const meta = {
     title: 'shared/Page',
