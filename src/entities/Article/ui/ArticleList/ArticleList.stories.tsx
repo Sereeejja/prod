@@ -4,7 +4,7 @@ import { ArticleView } from 'entities/Article';
 import { ArticleList } from './ArticleList';
 
 const meta = {
-    title: 'shared/ArticleList',
+    title: 'entities/ArticleList',
     component: ArticleList,
     parameters: {
         layout: 'fullscreen',

@@ -3,7 +3,7 @@ import { fn } from '@storybook/test';
 import ArticlesPage from './ArticlesPage';
 
 const meta = {
-    title: 'shared/ArticlesPage',
+    title: 'pages/ArticlesPage',
     component: ArticlesPage,
     parameters: {
         layout: 'fullscreen',

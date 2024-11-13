@@ -1,5 +1,5 @@
 import React, {
-    memo, MutableRefObject, ReactNode, useRef, UIEvent,
+    memo, MutableRefObject, ReactNode, useRef,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfinityScroll } from 'shared/lib/hooks/useInfinityScroll/useInfinityScroll';
@@ -39,7 +39,7 @@ const Page: React.FC<PageProps> = memo((props: PageProps) => {
     useInitialEffect(() => {
         wrapperRef.current.scrollTop = scrollPosition;
     });
-    const onScrollHandler = useThrottle((e: UIEvent<HTMLDivElement>) => {
+    const onScrollHandler = useThrottle((e: React.UIEvent<HTMLDivElement>) => {
         dispatch(scrollSaveActions.setScrollPosition({
             position: e.currentTarget.scrollTop,
             path: location.pathname,
@@ -53,7 +53,7 @@ const Page: React.FC<PageProps> = memo((props: PageProps) => {
             onScroll={onScrollHandler}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd && (<div ref={triggerRef} className={cls.trigger} />)}
         </section>
     );
 });

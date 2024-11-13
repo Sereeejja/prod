@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { ArticleViewSelector } from './ArticleViewSelector';
+import ArticlesPageFilters from './ArticlesPageFilters';
 
 const meta = {
-    title: 'entities/ArticleViewSelector',
-    component: ArticleViewSelector,
+    title: 'pages/ArticlesPageFilters',
+    component: ArticlesPageFilters,
     parameters: {
         layout: 'fullscreen',
     },
@@ -14,11 +14,11 @@ const meta = {
     },
     args: {},
 
-} satisfies Meta<typeof ArticleViewSelector>;
+} satisfies Meta<typeof ArticlesPageFilters>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: { onViewClick: () => {} },
+    args: {},
 };

@@ -81,7 +81,7 @@ const article = {
 } as Article;
 
 const meta = {
-    title: 'shared/ArticleListItem',
+    title: 'entities/ArticleListItem',
     component: ArticleListItem,
     parameters: {
         layout: 'fullscreen',

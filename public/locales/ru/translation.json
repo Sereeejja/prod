@@ -24,5 +24,19 @@
   "Error while loading an article": "Error while loading an article",
   "Comments does not exists": "Comments does not exists",
   "Put comment text": "Put comment text",
-  "Send comment": "Send comment"
+  "Send comment": "Send comment",
+  "Sort By": "Sort By",
+  "Search": "Search",
+  "Order": "Order",
+  "dec": "dec",
+  "inc": "inc",
+  "date": "date",
+  "title": "title",
+  "views": "views",
+  "Science": "Science",
+  "Economics": "Economics",
+  "It": "It",
+  "All Articles": "All Articles",
+  "Articles does not found": "Articles does not found",
+  "Articles do not found": "Articles do not found"
 }
