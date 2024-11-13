@@ -70,8 +70,8 @@ const ArticlesPageFilters: React.FC<ArticlesPageFiltersProps> = memo((props: Art
     const onChangeType = useCallback((value: ArticleType) => {
         dispatch(articlesPageActions.setType(value));
         dispatch(articlesPageActions.setPage(1));
-        debounceFetchData();
-    }, [debounceFetchData, dispatch]);
+        fetchData();
+    }, [dispatch, fetchData]);
 
     return (
         <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
